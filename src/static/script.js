@@ -74,6 +74,11 @@ function append_movies(movies) {
             add_button.textContent = "Adding...";
             add_to_radarr(movie.Name, movie.Year);
         });
+        movie_col
+			.querySelector('.open-tmdb-btn')
+			.addEventListener('click', function () {
+                window.open(`https://www.themoviedb.org/movie/${movie.TMDB_ID}`, '_blank');
+			});
         movie_col.querySelector('.get-overview-btn').addEventListener('click', function () {
             overview_req(movie);
         });

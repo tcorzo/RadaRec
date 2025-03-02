@@ -53,6 +53,7 @@ body {
 }
 
 .add-to-radarr-btn,
+.open-tmdb-btn,
 .get-overview-btn {
     margin: 2px 0px;
     z-index: 1;
@@ -60,6 +61,7 @@ body {
 }
 
 .movie-img-container:hover .add-to-radarr-btn,
+.movie-img-container:hover .open-tmdb-btn,
 .movie-img-container:hover .get-overview-btn {
     transition: opacity 0.6s ease;
     opacity: 1;
