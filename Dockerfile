@@ -1,4 +1,5 @@
 FROM python:3.12-alpine
+LABEL org.opencontainers.image.source="https://github.com/tcorzo/radarec"
 
 # Set build arguments
 ARG RELEASE_VERSION
@@ -15,10 +16,10 @@ WORKDIR /radarec
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Make the script executable
-RUN chmod +x thewicklowwolf-init.sh
+RUN chmod +x init.sh
 
 # Expose port
 EXPOSE 5000
 
 # Start the app
-ENTRYPOINT ["./thewicklowwolf-init.sh"]
+ENTRYPOINT ["./init.sh"]
