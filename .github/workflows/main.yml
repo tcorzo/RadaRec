@@ -10,16 +10,12 @@ on:
 jobs:
   bump-version-and-create-release-tag:
     runs-on: ubuntu-latest
-    env:
-      GH_TOKEN: ${{ secrets.PAT_TOKEN }}
     outputs:
       new_version: ${{ steps.increment_version.outputs.new_version }}
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.PAT_TOKEN }}
 
       - name: Fetch and list tags
         run: |
