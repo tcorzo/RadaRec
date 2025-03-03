@@ -51,6 +51,8 @@ jobs:
               --repo="${GITHUB_REPOSITORY}" \
               --title="v${{ env.NEW_VERSION }}" \
               --generate-notes
+        env:
+          GH_TOKEN: ${{ github.token }}
 
   build-docker-image:
     runs-on: ubuntu-latest
