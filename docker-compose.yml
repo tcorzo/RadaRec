@@ -1,0 +1,10 @@
+services:
+  radarec:
+    image: ghcr.io/tcorzo/radarec:latest
+    container_name: radarec
+    volumes:
+      - radarec-config:/radarec/config
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - 5000:5000
+    restart: unless-stopped
