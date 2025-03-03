@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "radarec"
+version = "0.1.0"
+description = "Web GUI for finding similar movies to selected Radarr movies"
+authors = ["tcorzo <me@tcorzo.dev>"]
+license = "GPL-3.0-only"
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.12"
+gunicorn = "*"
+gevent = "*"
+gevent-websocket = "*"
+flask = "*"
+flask_socketio = "*"
+requests = "*"
+thefuzz = "*"
+Unidecode = "*"
+iso639-lang = "*"
+
+[tool.poetry.dev-dependencies]
+# add dev dependencies if needed
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
