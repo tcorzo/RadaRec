@@ -7,20 +7,20 @@ echo "Initializing app..."
 cat << 'EOF'
 _____________________________________
 
-               .-'''''-.             
-             .'         `.           
-            :             :          
-           :               :         
-           :      _/|      :         
-            :   =/_/      :          
-             `._/ |     .'           
-          (   /  ,|...-'             
-           \_/^\/||__                
-       _/~  `""~`"` \_               
-     __/  -'/  `-._ `\_\__           
-    /    /-'`  `\   \  \-.\          
+               .-'''''-.
+             .'         `.
+            :             :
+           :               :
+           :      _/|      :
+            :   =/_/      :
+             `._/ |     .'
+          (   /  ,|...-'
+           \_/^\/||__
+       _/~  `""~`"` \_
+     __/  -'/  `-._ `\_\__
+    /    /-'`  `\   \  \-.\
 _____________________________________
-Brought to you by TheWicklowWolf   
+Brought to you by TheWicklowWolf
 _____________________________________
 
 If you'd like to buy me a coffee:
@@ -44,4 +44,4 @@ chown -R ${PUID}:${PGID} /radarec
 
 # Start the application with the specified user permissions
 echo "Running RadaRec..."
-exec su-exec ${PUID}:${PGID} gunicorn src.RadaRec:app -c gunicorn_config.py
+exec su-exec ${PUID}:${PGID} gunicorn src.main:app -c gunicorn_config.py
